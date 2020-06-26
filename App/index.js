@@ -1,13 +1,15 @@
+import 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native';
 import React from 'react';
 import { Provider } from 'react-redux';
-import Screen from './src/';
 import store from './src/config/store';
+import AppNavigator from './src/config/router';
+
 const App = () => {
   return (
     <Provider store={store}>
-      <SafeAreaView>
-        <Screen />
+      <SafeAreaView style={{flex: 1}}>
+        <AppNavigator />
       </SafeAreaView>
     </Provider>
   );
